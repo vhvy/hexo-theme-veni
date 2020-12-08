@@ -2,7 +2,7 @@ user:
   avatar: https://i.loli.net/2020/11/15/Mh6L2Ijicu1aKvR.jpg
 
 post:
-  expired_day: 1
+  expired_day: 365
 
 aside:
   bg: https://st.imququ.com/static/img/blog/left-bg2.jpg

@@ -29,7 +29,7 @@
         %> 
         <% if (isExpired) { %>
             <% 
-                const expiredDay = Math.ceil(expiredTime / dayTimestamp);
+                const expiredDay = Math.ceil(diffTime / dayTimestamp);
             %> 
             <p class="expired-tips">提醒：本文最后更新于 <%= expiredDay %> 天前，文中所描述的信息可能已发生改变，请谨慎使用。</p>
         <% } %>
