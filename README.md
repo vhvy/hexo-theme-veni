@@ -10,6 +10,8 @@
 
 请将主题目录下`other`文件夹内所有文件夹复制到博客根目录`/source`下，根目录的`_config.yml` 可参考主题目录下的`_config.root.example.yml`进行修改
 
+需要`hexo-generator-feed hexo-renderer-sass`这三个模块。
+
 ## 根目录 _config.yml 配置
 ```
 title: 博客名称，同时也是页面title
