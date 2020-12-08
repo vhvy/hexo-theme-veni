@@ -1,0 +1,17 @@
+<%- css("css/page") %>
+<%- css("css/content") %>
+<%- css("css/chaos") %>
+<div class="content-box">
+    <% 
+        const title = _p('nav.chaos');
+    %>
+    <h1 class="title"><%= title %></h1>
+    <ul class="content page-list">
+        <% for( let { name, link, info } of theme.chaos ) { %>
+        <li class="project-item">
+            <a href="<%= link %>" target="_blank"><%= name %></a>
+            <p><%= info %></p>
+        </li>
+        <% } %>
+    </ul>
+</div>

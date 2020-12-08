@@ -1,0 +1,13 @@
+nav:
+  index: Home
+  categories: Categories
+  tags: Tags
+  chaos: Chaos
+  archives: Archive
+  blogroll: Blogroll
+  about: About
+
+archives:
+  year: ''
+
+toc: List

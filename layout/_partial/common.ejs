@@ -1,0 +1,30 @@
+<% 
+    const data = [];
+    // 传递给公用布局的数据，包含节点名称和子节点名称、链接以及日期。
+
+    const tocData = [];
+    // 节点名称，供渲染菜单列表使用
+
+    const type = page.type;
+    const title = _p('nav.' + type);
+    const intro = theme.nav[type].intro;
+
+    for (let { name, posts } of site.categories.data) {
+        tocData.push(name);
+        let list = posts.data.map(p => ({
+            title: p.title,
+            date: p.date.format("MMM DD, YYYY"),
+            path: config.root + p.path
+        }));
+        data.push({
+            name,
+            list
+        });
+    }
+%>
+<%- include("page_wrap", {
+    data,
+    tocData,
+    title,
+    intro
+}) %> 

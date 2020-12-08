@@ -1,0 +1,37 @@
+<%- css("css/page") %>
+<div class="content-box">
+    <h1 class="title">
+        <%= title %>
+    </h1>
+    <div class="content">
+        <%- include("toc_box", {
+            title: title + _p('toc'),
+            data: tocData
+        }) %>
+        <p class="intro">
+            <%= intro %>
+        </p>
+        <% for( let index = 0; index < data.length; index++ ) { %>
+            <% 
+                const { name, list } = data[index];
+            %> 
+            <h3 id="toc-<%= index %>"><%= name %></h3>
+            <ul class="page-list">
+                <% for( let index = 0; index < list.length; index++ ) { %>
+                    <% 
+                        const { title, date, path } = list[index];
+                    %> 
+                    <li>
+                        <a href="<%= path %>">
+                            <%= title %> 
+                        </a>
+                        <span class="date">
+                            (<%= date %>)
+                        </span>
+                    </li>
+                <% } %>
+            </ul>
+        <% } %>
+        
+    </div>
+</div>

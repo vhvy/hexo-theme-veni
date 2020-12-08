@@ -1,0 +1,47 @@
+<%- css("css/content") %> 
+<% if (config.highlight?.enable) { %>
+    <% if (theme.highlight.url && theme.highlight.url != "") { %>
+        <%- css(theme.highlight.url) %>
+    <% } else { %>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.3.2/build/styles/<%= theme.highlight.style %>.min.css">
+    <% } %>
+<% } else if (config.prismjs?.enable) { %>
+    <% if (theme.prismjs.url && theme.prismjs.url != "") { %>
+        <%- css(theme.prismjs.url) %>
+    <% } else { %>
+    <link rel="stylesheet"
+        href="//cdn.jsdelivr.net/npm/prismjs@1.22.0/themes/<%= theme.prismjs.style %>.css">
+    <% } %>
+<% } %>
+
+<div class="content-box">
+    <%- include("_partial/meta", {time: page.date.format("MMM DD, YYYY")}) %>
+
+    <h1 class="title"><%= page.title %></h1>
+    <div class="content">
+        <% 
+            const currentTime = Date.now();
+            const postTime = Number(page.date.format('x'));
+            const dayTimestamp = 86400000;
+            const expiredTime = (theme.post?.expired_day ?? 180) * dayTimestamp;
+            const diffTime = currentTime - postTime;
+            const isExpired = diffTime > expiredTime;
+        %> 
+        <% if (isExpired) { %>
+            <% 
+                const expiredDay = Math.ceil(expiredTime / dayTimestamp);
+            %> 
+            <p class="expired-tips">提醒：本文最后更新于 <%= expiredDay %> 天前，文中所描述的信息可能已发生改变，请谨慎使用。</p>
+        <% } %>
+        <%- page.content %>
+    </div>
+</div>
+
+<div class="pagination">
+    <% if (page.prev) { %>
+        <a href="/<%= page.prev.path %>" class="link prev"><%= page.prev.title %></a>
+    <% } %>
+    <% if (page.next) { %>
+        <a href="/<%= page.next.path %>" class="link next"><%= page.next.title %></a>
+    <% } %>
+</div>

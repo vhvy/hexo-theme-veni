@@ -1,0 +1,51 @@
+<%- css("css/page") %>
+<% 
+    const title = _p("nav.blogroll");
+    const intro = theme.nav.blogroll.intro;
+    const data = theme.blogroll.list;
+    const processData = [[]];
+
+    let index = 0;
+
+    for (let blog of data) {
+        blog?.flag !== undefined && processData.push([]) && index++;
+        processData[index].push(blog);
+    }
+
+%> 
+<div class="content-box">
+    <h1 class="title">
+        <%= title %>
+    </h1>
+    <div class="content">
+        <p class="intro">
+            <%= intro %>
+        </p>
+        <% for( let index = 0; index < processData.length; index++ ) { %>
+            <% 
+                const list = processData[index];
+                const cssList = ['page-list'];
+                const listCss = cssList.join(" ");
+            %> 
+            <ul class="<%= listCss %>">
+                <% for( let { blogname, link, info, ssl = true } of list ) { %>
+                    <% 
+                        const cssList = [];
+                        ssl && cssList.push('ssl');
+                        const cssStr = cssList.join(" ");    
+                    %> 
+                    <li class="<%= cssStr %>">
+                        <a href="<%= link %>">
+                            <%= blogname %> 
+                        </a>
+                        <% if (info) { %>
+                        <span class="info">
+                            (<%= info %>)
+                        </span>
+                        <% } %>
+                    </li>
+                <% } %>
+            </ul>
+        <% } %>
+    </div>
+</div>

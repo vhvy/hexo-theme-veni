@@ -1,0 +1,11 @@
+<%- css("css/page") %>
+<%- css("css/content") %> 
+<div class="content-box">
+    <% 
+        const title = _p('nav.about');
+    %> 
+    <h1 class="title"><%= title %></h1>
+    <div class="content">
+        <%- page.content %>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<%- css("css/index") %> 
+
+<% page.posts.data.forEach(function(post){ %>
+<article class="post">
+    <%- include("_partial/meta", {time: post.date.format("MMM DD, YYYY")}) %>
+    <h1 class="post-title title">
+        <a href="<%= post.path %>">
+            <%= post.title %>
+        </a>
+    </h1>
+    <div class="summary content">
+        <p>
+            <% if (post.excerpt !== "") { %>
+            <%= post.excerpt %>
+            <% } else if (theme.excerpt?.status) { %>
+            <%= post.content.slice(0, theme.excerpt.length ?? 150).replace(/<\/?.+?>/gi, "") %>
+            <% } else { %>
+            <%= post.content.slice(0, post.content.indexOf("\n")).replace(/<\/?.+?>/gi, "") %>
+            <% } %>[...]
+        </p>
+        <p>
+            <a href="<%= post.path %> ">继续阅读 »</a>
+        </p>
+    </div>
+</article>
+<% }) %>
+
+<%- include("_partial/pagination") %> 

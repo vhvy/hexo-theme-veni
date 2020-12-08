@@ -1,0 +1,10 @@
+<title>
+    <% if (is_post()) { %>
+        <%= page.title + " -" %> 
+    <% } else if (is_archive()) { %>
+        <%= _p('nav.archives') + " -" %> 
+    <% } else if (is_page()) { %>
+        <%= _p('nav.' + page.type) + " -" %> 
+    <% } %> 
+    <%= config.title %>
+</title>

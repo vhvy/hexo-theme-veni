@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="<%= config.language %>">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- css("css/main") %>
+    <%- include("_partial/title") %>
+    <link rel="alternate" href="/rss.xml" type="application/atom+xml">
+</head>
+
+<body>
+    <div id="root">
+        <%- include("_partial/aside") %>
+        <main class="body-box" style="margin-left: <%- theme.aside.width %>px;">
+            <article class="container">
+                <%- body %>
+            </article>
+            <%- include("_partial/footer") %>
+        </main>
+    </div>
+</body>
+
+</html>

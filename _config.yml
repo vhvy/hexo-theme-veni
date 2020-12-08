@@ -1,0 +1,95 @@
+user:
+  avatar: https://i.loli.net/2020/11/15/Mh6L2Ijicu1aKvR.jpg
+
+post:
+  expired_day: 1
+
+aside:
+  bg: https://st.imququ.com/static/img/blog/left-bg2.jpg
+  width: 300
+
+nav: 
+  index: 
+    path: /
+    status: true
+  categories: 
+    path: /categories
+    status: true
+    intro: 分类简介
+  tags: 
+    path: /tags
+    status: true
+    intro: 标签简介
+  chaos: 
+    path: /chaos
+    status: true
+  archives: 
+    path: /archives
+    status: true
+    intro: 归档简介
+  blogroll:
+    path: /blogroll
+    status: true
+    intro: 友链简介
+  about: 
+    path: /about
+    status: true
+
+subnav:
+  github:
+    path: https://github.com/vhvy
+    icon: https://i.loli.net/2020/11/15/KgnCLhyWJaYpX3U.png
+    color: '#fff'
+    style: 'background-position: 40%'
+  email:
+    path: mailto:vhvy@qq.com
+    icon: https://i.loli.net/2020/11/15/ZGnqMQsFutvEcdb.png
+    color: '#fff'
+    style: 'background-size: 70%'
+  rss:
+    path: /rss.xml
+    icon: https://i.loli.net/2020/11/15/mkNMb9soJOVTQWL.png
+    color: '#ef7522'
+    style: 'background-size: 65%'
+
+archives:
+  sort: desc
+  # sort: asc
+  
+blogroll:
+  list:
+    - blogname: Jerry Qu
+      link: https://imququ.com
+      info: 屈屈大神~
+      ssl: false
+    - blogname: Jerry Qu
+      link: https://imququ.com
+      info: 屈屈大神~
+    - blogname: Jerry Qu
+      link: https://imququ.com
+      info: 屈屈大神~
+      ssl: false
+
+chaos:
+    - name: 试验田一号
+      link: https://google.com
+      info: 没想到吧，哈哈
+    - name: 试验田二号
+      link: https://google.com
+      info: 没想到吧，哈哈
+    
+
+excerpt: 
+  status: false
+  length: 150
+
+highlight: 
+  style: routeros
+  # url: ''
+
+prismjs:
+  style: prism
+  # url: https://cdn.jsdelivr.net/npm/prism-themes@1.5.0/themes/prism-vs.css
+
+node_sass:
+  outputStyle: compressed

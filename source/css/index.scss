@@ -1,0 +1,20 @@
+.post {
+    padding: 30px 0;
+    border-bottom: 1px solid #ccc;
+    .post-title {
+        a {
+            color: #333;
+            transition: color 0.2s ease;
+            &:hover {
+                color: #076dd0;
+            }
+        }
+    }
+    .summary {
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+
+}

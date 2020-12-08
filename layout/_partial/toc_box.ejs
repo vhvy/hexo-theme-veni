@@ -1,0 +1,13 @@
+<%- css("css/toc-box") %> 
+<div id="toc-wrap">
+    <p><strong><%= title %></strong></p>
+    <ul>
+        <% for( let index = 0; index < data.length; index++ ) { %>
+            <li>
+                <a href="#toc-<%= index %>">
+                    <%= data[index] %> 
+                </a>
+            </li>
+        <% } %>
+    </ul>
+</div>

@@ -1,0 +1,13 @@
+nav:
+  index: 首页
+  categories: 分类
+  tags: 标签
+  chaos: 混沌
+  archives: 归档
+  blogroll: 友链
+  about: 关于
+
+archives:
+  year: '年'
+
+toc: 列表

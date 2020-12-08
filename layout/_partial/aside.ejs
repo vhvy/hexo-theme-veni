@@ -1,0 +1,27 @@
+<aside class="aside-wrap" style="background-image: url(<%= theme.aside.bg %>); width: <%= theme.aside.width %>px">
+    <%- image_tag(theme.user.avatar, {
+        class: "user-avatar",
+        alt: "avatar"
+    }) %> 
+
+    <div class="nav-wrap">
+        <h1 class="author"><%= config.author %></h1>
+        <p class="subtitle"><%= config.subtitle %></p>
+        <ul class="nav-list">
+            <% Object.entries(theme.nav).forEach(([k, {path, status}]) => { %>
+            <% if (status) { %>
+            <li class="nav-item">
+                <a href="<%= path %> "><%= _p('nav.' + k) %> </a>
+            </li>
+            <% } %>
+            <% }) %>
+        </ul>
+        <ul class="sub-nav-list">
+            <% Object.entries(theme.subnav).forEach(([k, {path, icon, color, style = ''}]) => { %>
+            <li class="sub-nav-item">
+                <a href="<%= path %> " aria-label="<%= k %>" title="<%= k %>" style="background-image: url(<%= icon %>);background-color: <%= color %>;<%= style %>"></a>
+            </li>
+            <% }) %>
+        </ul>
+    </div>
+</aside>
