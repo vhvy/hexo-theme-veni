@@ -25,6 +25,12 @@ start_year: 博客建立时间，显示在footer里版权部分
 highlight 和 prismjs 二选一，两者都启用时highlight优先
 相关配置请自行查阅文档，主题部分参见下方主题文件夹内的`_config.yml`
 
+使用`prismjs`时请在代码片段开头加上语言类型，如下:
+
+```shell
+sudo apt update
+```
+
 
 theme: hexo-theme-veni
 
