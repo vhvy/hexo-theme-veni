@@ -14,14 +14,22 @@
             border-bottom: 1px solid #e2e2e2;
         }
 
-        ul {
-            margin: 7px 7px 7px 21px !important;
+        ul,ol {
+            margin: 7px 7px 7px 21px;
             list-style: disc;
 
             a {
                 &:hover {
                     text-decoration: underline;
                 }
+            }
+
+            ul, ol {
+                margin: {
+                    top: 0;
+                    bottom: 0;
+                }
+                list-style: circle;
             }
         }
 

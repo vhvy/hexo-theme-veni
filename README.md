@@ -10,7 +10,9 @@
 
 请将主题目录下`other`文件夹内所有文件夹复制到博客根目录`/source`下，根目录的`_config.yml` 可参考主题目录下的`_config.root.example.yml`进行修改
 
-需要`hexo-generator-feed hexo-renderer-sass`这三个模块。
+需要`hexo-generator-feed hexo-renderer-sass`这两个模块。
+
+另外nodejs版本需要14以上。
 
 ## 根目录 _config.yml 配置
 ```
