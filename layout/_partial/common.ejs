@@ -9,7 +9,7 @@
     const title = _p('nav.' + type);
     const intro = theme.nav[type].intro;
 
-    for (let { name, posts } of site.categories.data) {
+    for (let { name, posts } of site[type].data) {
         tocData.push(name);
         let list = posts.data.map(p => ({
             title: p.title,
