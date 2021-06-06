@@ -49,7 +49,12 @@
             %>
         <p class="expired-tips">提醒：本文最后更新于 <%= expiredDay %> 天前，文中所描述的信息可能已发生改变，请谨慎使用。</p>
         <% } %>
-        <%- page.content %>
+        <% 
+            const content = page.content.replace(/<img(.*?)src="(.*?)"(.*?)>/gi, function (str, before, src, after) {
+                return `<img${before} src="https://i.loli.net/2021/06/06/YcUyJTBV7ExC6hp.gif" data-original="${src}"${after}/>`;
+            });
+        %> 
+        <%- content %>
     </div>
 </div>
 
@@ -61,3 +66,5 @@
     <a href="/<%= page.next.path %>" class="link next"><%= page.next.title %></a>
     <% } %>
 </div>
+
+<%- js("js/content") %>

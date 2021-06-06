@@ -3,5 +3,11 @@
 
     img {
         max-width: 90%;
+        display: inline-block;
+    }
+
+    img[data-original] {
+        width: 80px;
+        height: 80px;
     }
 }
