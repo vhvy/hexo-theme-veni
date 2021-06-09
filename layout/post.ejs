@@ -51,7 +51,7 @@
         <% } %>
         <% 
             const content = page.content.replace(/<img(.*?)src="(.*?)"(.*?)>/gi, function (str, before, src, after) {
-                return `<img${before} src="https://i.loli.net/2021/06/06/YcUyJTBV7ExC6hp.gif" data-original="${src}"${after}/>`;
+                return `<img${before} class="post-img" src="https://i.loli.net/2021/06/06/YcUyJTBV7ExC6hp.gif" data-original="${src}"${after}/>`;
             });
         %> 
         <%- content %>

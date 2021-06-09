@@ -1,13 +1,25 @@
 .container .content-box {
     border-bottom: 1px solid #ccc;
 
-    img {
-        max-width: 90%;
+    .post-img {
+        max-width: 60%;
         display: inline-block;
-    }
 
-    img[data-original] {
-        width: 80px;
-        height: 80px;
+        @media screen and (max-width: 1500px) {
+            max-width: 70%;
+        }
+
+        @media screen and (max-width: 1200px) {
+            max-width: 80%;
+        }
+
+        @media screen and (max-width: 960px) {
+            max-width: 100%;
+        }
+
+        &[data-original] {
+            width: 80px;
+            height: 80px;
+        }
     }
 }
