@@ -1,8 +1,8 @@
-<aside class="aside-wrap" style="background-image: url(<%= theme.aside.bg %>); width: <%= theme.aside.width %>px">
-    <%- image_tag(theme.user.avatar, {
-        class: "user-avatar",
-        alt: "avatar"
-    }) %> 
+<aside class="aside-wrap" style="width: <%= theme.aside.width %>px">
+
+    <img referrerpolicy="no-referrer" src="<%= theme.aside.bg %>" class="aside-bg" alt="bg"/>
+
+    <img referrerpolicy="no-referrer" src="<%= theme.user.avatar %>" class="user-avatar" alt="avatar"/>
 
     <div class="nav-wrap">
         <h1 class="author"><%= config.author %></h1>
@@ -17,9 +17,11 @@
             <% }) %>
         </ul>
         <ul class="sub-nav-list">
-            <% Object.entries(theme.subnav).forEach(([k, {path, icon, color, style = ''}]) => { %>
+            <% Object.entries(theme.subnav).forEach(([k, {path, icon, color, style = '', img_style = ''}]) => { %>
             <li class="sub-nav-item">
-                <a href="<%= path %> " aria-label="<%= k %>" title="<%= k %>" style="background-image: url(<%= icon %>);background-color: <%= color %>;<%= style %>"></a>
+                <a href="<%= path %> " aria-label="<%= k %>" title="<%= k %>" style="background-color: <%= color %>;<%= style %>">
+                    <img referrerpolicy="no-referrer" src="<%= icon %>" class="nav-img" style="<%= img_style %>" />
+                </a>
             </li>
             <% }) %>
         </ul>

@@ -40,17 +40,16 @@ subnav:
     path: https://github.com/vhvy
     icon: https://i.loli.net/2020/11/15/KgnCLhyWJaYpX3U.png
     color: '#fff'
-    style: 'background-position: 40%'
   email:
     path: mailto:vhvy@qq.com
     icon: https://i.loli.net/2020/11/15/ZGnqMQsFutvEcdb.png
     color: '#fff'
-    style: 'background-size: 70%'
+    img_style: 'transform: scale(.7);'
   rss:
     path: /rss.xml
     icon: https://i.loli.net/2020/11/15/mkNMb9soJOVTQWL.png
     color: '#ef7522'
-    style: 'background-size: 65%'
+    img_style: 'transform: scale(.65);'
 
 archives:
   sort: desc
