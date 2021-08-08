@@ -17,6 +17,7 @@ class LazyLoadImg {
         this.observer.unobserve(el);
         const src = el.getAttribute('data-original');
         let image = new Image();
+        image.setAttribute("referrerpolicy","no-referrer");
         image.onload = () => {
             el.onload = () => {
                 el.removeAttribute('data-original');
