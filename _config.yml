@@ -92,3 +92,7 @@ prismjs:
 
 node_sass:
   outputStyle: compressed
+
+gtag:
+  open: false
+  id: ''

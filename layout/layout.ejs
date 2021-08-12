@@ -10,6 +10,16 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="description" content="<%= config.description %>">
     <meta name="keywords" content="<%= config.keywords %>" >
+    <% if (theme.gtag.open) { %>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<%= theme.gtag.id %>"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '<%= theme.gtag.id %>');
+    </script>
+    <% } %>
 </head>
 
 <body>
